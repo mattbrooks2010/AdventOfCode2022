@@ -3,7 +3,7 @@ var line = string.Empty;
 
 while ((line = Console.ReadLine()) != null)
 {
-    var ranges = line.Split(new[] { '-', ',' });
+    var ranges = line.Split('-', ',');
     var a = int.Parse(ranges[0]);
     var b = int.Parse(ranges[1]);
     var c = int.Parse(ranges[2]);
