@@ -9,7 +9,7 @@ while ((line = Console.ReadLine()) != null)
     var c = int.Parse(ranges[2]);
     var d = int.Parse(ranges[3]);
 
-    if ((b >= c && a <= d) || (a <= d && b >= c))
+    if (b >= c && a <= d)
     {
         count++;
     }
