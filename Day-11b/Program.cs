@@ -16,7 +16,7 @@ while ((line = Console.ReadLine()) != null)
     {
         var expr = line.Substring(13).Split(' ');
 
-        monkeys[^1].Operation = (old) =>
+        monkeys[^1].Operation = old =>
         {
             ulong rhs()
             {
@@ -81,7 +81,7 @@ for (var r = 1; r <= 10000; r++)
     }
 }
 
-monkeys.Sort((Monkey x, Monkey y) => x.Inspections.CompareTo(y.Inspections));
+monkeys.Sort((x, y) => x.Inspections.CompareTo(y.Inspections));
 Console.WriteLine(monkeys[^1].Inspections * monkeys[^2].Inspections);
 
 class Monkey
