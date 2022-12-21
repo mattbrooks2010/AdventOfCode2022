@@ -16,12 +16,7 @@ for (var i = 1; i <= 10; i++)
     }
 }
 
-var index0 = decrypted
-    .Select((o, i) => (o.num, idx: i))
-    .SkipWhile(o => o.num != 0)
-    .Select(o => o.idx)
-    .First();
-
+var index0 = decrypted.FindIndex(o => o.num == 0);
 var index1 = decrypted[(index0 + 1000) % decrypted.Count].num;
 var index2 = decrypted[(index0 + 2000) % decrypted.Count].num;
 var index3 = decrypted[(index0 + 3000) % decrypted.Count].num;
